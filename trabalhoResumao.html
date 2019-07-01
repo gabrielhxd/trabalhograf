@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Documento sem título</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .topo {
+        max-width: 100%;
+        min-width: 320px;
+        height: auto;
+        background-color: #ff7b7d;
+      }
+
+      .cabecalho {
+        max-width: 1366px;
+        min-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 30px;
+      }
+
+      .logo {
+        width: 250px;
+        height: 100px;
+        margin: 0 auto;
+      }
+
+      .menu {
+        height: auto;
+      }
+
+      .lead {
+        font-weight: 400;
+      }
+
+      .menu ul {
+        text-align: center;
+        max-width: 100%;
+        min-width: 320px;
+      }
+
+      .menu li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 10px;
+      }
+
+      .menu a:hover {
+        text-decoration: underline;
+      }
+
+      .meio {
+        max-width: 100%;
+        min-width: 320px;
+        height: auto;
+      }
+
+      .banner {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .banner img {
+        max-width: 100%;
+        min-width: 320px;
+        height: auto;
+      }
+
+      .produtos {
+        max-width: 1366px;
+        min-width: 320px;
+        height: auto;
+        text-align: center;
+        background-color: #c4c4c4;
+      }
+
+      .boxes {
+        height: 210px;
+        width: 210px;
+        display: inline-table;
+        background-color: #5e5e5e;
+        margin: 10px;
+      }
+
+      .rodape {
+        max-width: 1366px;
+        min-width: 320px;
+        height: auto;
+        text-align: center;
+      }
+
+      .mapa {
+        width: auto;
+        height: auto;
+        display: inline-table;
+      }
+
+      .seila {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      navbar-brand:hover {
+        background-color: #5e5e5e !important;
+      }
+
+      .card {
+        margin: 0 auto;
+        /* Added */
+        float: none;
+        /* Added */
+        margin-bottom: 10px;
+        /* Added */
+        background-color: #2ba8bf;
+        width: 90%;
+        transition: box-shadow 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        box-shadow: 0px 0px 26px -2px rgba(0, 0, 0, 0.75);
+      }
+
+      .pokemonimg {
+        margin: 10px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .video {
+        width: auto;
+        height: auto;
+        display: inline-table;
+      }
+
+      .logos {
+        margin: 20px 0px 20px 0px;
+      }
+
+      .btn-outline-success {
+        border-color: #e6e6e6;
+        color: #757575;
+        background-color: white;
+      }
+
+      .navbar-text {
+        padding-top: 7px;
+      }
+
+      .nav-link {
+        color: white !important;
+        border-radius: 4px;
+      }
+
+      .card-text {
+        color: white;
+      }
+
+      .paddingBody {
+        padding-top: 290px;
+      }
+
+      @media (max-width: 575.98px) {
+        .paddingBody {
+          padding-top: 490px;
+        }
+      }
+
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        .paddingBody {
+          padding-top: 360px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .paddingBody {
+          padding-top: 230px;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .paddingBody {
+          padding-top: 230px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+      }
+
+      @media (min-width: 992px) {
+        .video {
+          width: 100%;
+        }
+        .mapa {
+          width: 100%;
+        }
+        iframe {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 576x) {
+        .card {
+          width: 100% !important;
+        }
+        .row {
+          margin: 20px !important;
+        }
+      }
+
+      @media (min-width: 768px) {
+      }
+
+      @media (min-width: 1200px) {
+        .card {
+          width: 100% !important;
+        }
+        .row {
+          margin: 30px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="position: fixed;z-index: -1"><img style="height: 160vh" src="./hexa.png" /></div>
+    <div style="overflow: hidden; background-color: #f2f2f2; position: fixed; width: 100%; z-index: 999999;">
+      <img style="position: absolute" src="./hexa.png" />
+      <div style="text-align: center">
+        <div class="row">
+          <div class="col-6 col-sm-4 col-md-2 logos"><img style="max-height: 90px;" src="./react.png.png" /></div>
+          <div class="col-6 col-sm-4 col-md-2 logos"><img style="max-height: 90px;" src="./js.png.png" /></div>
+          <div class="col-6 col-sm-4 col-md-2 logos"><img style="max-height: 90px;" src="./inv.png.png" /></div>
+          <div class="col-6 col-sm-4 col-md-2 logos"><img style="max-height: 90px;" src="./ai.png.png" /></div>
+          <div class="col-6 col-sm-4 col-md-2 logos"><img style="max-height: 90px;" src="./pss.png" /></div>
+          <div class="col-6 col-sm-4 col-md-2 logos"><img style="max-height: 90px;" src="./dw.png.png" /></div>
+        </div>
+      </div>
+      <div class="topo">
+        <div class="menu">
+          <nav style="background-color: #2BA8BF !important" class="navbar navbar-expand-lg navbar-light bg-light">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" style="margin: auto" href="#">
+              <img
+                src="https://mir-s3-cdn-cf.behance.net/user/138/506482364014857.5ced27f7a8f10.jpg"
+                style="width: 65px; border-radius: 50%"
+                class="d-inline-block align-top"
+                alt=""
+              />
+              <p style="display: inline-block;margin-top: 17px; margin-left: 5px; color: white">Gabriel Henrique Nehls</p>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./trabalho.html">Projetos<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="font-weight: 600;" href="./trabalhoResumao.html">Resumão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./trabalhoExperiencia.html">Experiência</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./trabalhoContato.html">Contato</a>
+                </li>
+              </ul>
+
+              <span class="navbar-text">
+                <a href="https://www.behance.net/gabrielnehls">
+                  <img
+                    alt=""
+                    style="width: 65px; margin: 0px 20px"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/1280px-Behance_logo.svg.png"
+                    alt=""
+                  />
+                </a>
+              </span>
+              <span class="navbar-text">
+                <a href="https://www.linkedin.com/in/gabriel-henrique-nehls-644521156/">
+                  <img
+                    href="./trabalhoContato.html"
+                    style="width: 65px;margin: 0px 20px"
+                    src="https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo.png"
+                    alt=""
+                  />
+                </a>
+              </span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="paddingBody">
+      <div class="jumbotron" style="background-color: #f2f2f2; padding: 0px 0px 0px 0px !important">
+        <div style="padding: 30px">
+          <h1 class=" display-4 ">21 anos, dev full stack e estudante de design gráfico</h1>
+          <p class="lead" style="font-weight: 300">Um jovem tentando unir duas das suas maiores paixões: PROGRAMAÇÂO & DESIGN</p>
+          <hr class="my-4 " />
+          <p>
+            Minha jornada pela programação começou na UDESC de joinville com o curso de bacharel em Ciência da Computação, no qual eu fiquei durante dois
+            anos.<br />Foram dois anos de descobertas e aprendizados. Estudei, participei de projetos, trabalhei no suporte técnico e por final descobri o
+            design, que fez com que eu largasse a UDESC e fosse para o bacharel em Design Gráfico da univille, no qual estou em amores há um ano e meio.
+          </p>
+        </div>
+        <div style="padding: 30px; background-color: #2BA8BF; color: white;">
+          <p class="lead ">Hobbies</p>
+          <hr class="my-4 " />
+          <ul class="list-group " style="margin-bottom: 30px ">
+            <li class="list-group-item" style="color: #2BA8BF">Sair com os amigos</li>
+            <li style="background-color: #2BA8BF; color: white " class="list-group-item ">Churrasco com a família</li>
+            <li class="list-group-item " style="color: #2BA8BF">Guitarra</li>
+            <li style="background-color: #2BA8BF; color: white " class="list-group-item ">Longboard</li>
+            <li class="list-group-item " style="color: #2BA8BF">Pescar</li>
+          </ul>
+        </div>
+        <div style="padding: 30px;">
+          <p class="lead ">Uma banda</p>
+          <hr class="my-4 " />
+          <div class="row">
+            <div class="col-12 col-md-6 ">
+              <iframe
+                style="margin-bottom: 30px "
+                width="100%"
+                height="450"
+                src="https://www.youtube.com/embed/BfOdWSiyWoc "
+                frameborder="0 "
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="col-12 col-md-6 ">
+              <iframe
+                style="margin-bottom: 30px "
+                width="100% "
+                height="450"
+                src="https://www.youtube.com/embed/YlUKcNNmywk"
+                frameborder="0 "
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 30px; background-color: #2BA8BF; color: white; margin-bottom: 30px ">
+          <p class="lead ">Um lugar</p>
+          <hr class="my-4 " />
+          <img style="width: 100% " src="./nature.jpg " />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
